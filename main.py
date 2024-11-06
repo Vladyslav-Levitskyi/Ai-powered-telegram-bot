@@ -16,7 +16,7 @@ def get_groq_response(content):
         messages=[
             {
                 "role": "system",
-                "content": "You always attempt the query."
+                "content": "You're a helpful, friendly assistant that always provides accurate and informative answers to any questions. Answer each question clearly and concisely, as if you’re chatting with someone who wants straightforward information or assistance. If the question isn`t clear, ask for clarification. Remember to keep your tone polite, engaging, and approachable. If you don’t understand the question, politely ask the user to clarify."
             },
             {
                 "role": "user",
