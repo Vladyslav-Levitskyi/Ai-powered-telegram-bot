@@ -4,9 +4,23 @@ The bot will start listening for messages on Telegram. Use the `/start` or `/hel
 
 ## Code Overview
 
-- **get_groq_response(content)**: Sends the user's message to the Groq API, where it generates a response using the Llama 70b model. The system prompt ensures the bot is polite, clear, and engaging.
-- **@bot.message_handler(commands=['start', 'help'])**: Responds to the `/start` and `/help` commands with a simple welcome message.
-- **@bot.message_handler(func=lambda message: True, content_types=["text"])**: Handles all text messages by passing them to the AI for a response.
+- **get_groq_response(content)**:
+  ```python
+  def get_groq_response(content)
+  ```
+  Sends the user's message to the Groq API, where it generates a response using the Llama 70b model. The system prompt ensures the bot is polite, clear, and engaging.
+
+- **Message Handler for Commands**:
+  ```python
+  @bot.message_handler(commands=['start', 'help'])
+  ```
+  Responds to the `/start` and `/help` commands with a simple welcome message.
+
+- **Message Handler for Text**:
+  ```python
+  @bot.message_handler(func=lambda message: True, content_types=["text"])
+  ```
+  Handles all text messages by passing them to the AI for a response.
 
 ## Libraries Used
 
